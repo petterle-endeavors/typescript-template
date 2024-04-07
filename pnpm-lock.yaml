@@ -42,8 +42,8 @@ devDependencies:
     specifier: ^15
     version: 15.0.0
   pnpm:
-    specifier: ^8.0
-    version: 8.13.1
+    specifier: 8.15.6
+    version: 8.15.6
   prettier:
     specifier: ^3.2
     version: 3.2.5
@@ -3822,8 +3822,8 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /pnpm@8.13.1:
-    resolution: {integrity: sha512-dYvrxpictkYsUTgSmEAZOxDCWN3NsKtD7g753Yd4S8IY1uQctb7qw2K4zjPx+LCAJbWZkzwLzoIFCpo2uEdNQw==}
+  /pnpm@8.15.6:
+    resolution: {integrity: sha512-d7iem+d6Kwatj0A6Gcrl4il29hAj+YrTI9XDAZSVjrwC7gpq5dE+5FT2E05OjK8poF8LGg4dKxe8prah8RWfhg==}
     engines: {node: '>=16.14'}
     hasBin: true
     dev: true

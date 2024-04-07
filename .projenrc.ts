@@ -64,7 +64,7 @@ const project = new typescript.TypeScriptProject({
   autoMergeOptions: {},
   license: 'MIT',
   copyrightOwner: 'Jacob Petterle',
-  devDeps: ['projen@^0.75', 'pnpm@^8.0', 'prettier@^3.2'],
+  devDeps: ['projen@0.80.19', 'pnpm@8.15.6', 'prettier@^3.2'],
   packageManager: NodePackageManager.PNPM,
   eslintOptions: {
     dirs: ['src'],
