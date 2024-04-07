@@ -20,7 +20,8 @@
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
     "projen": "npx projen",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint . --fix --max-warnings 0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.10",
