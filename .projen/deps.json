@@ -55,11 +55,6 @@
       "type": "build"
     },
     {
-      "name": "nx",
-      "version": "^18.2",
-      "type": "build"
-    },
-    {
       "name": "prettier",
       "type": "build"
     },
