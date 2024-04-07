@@ -65,7 +65,7 @@ const project = new typescript.TypeScriptProject({
   autoMergeOptions: {},
   license: 'MIT',
   copyrightOwner: 'Jacob Petterle',
-  devDeps: ['prettier@^3.2'],
+  devDeps: ['prettier@^3.2', 'nx@^18.2'],
   packageManager: NodePackageManager.PNPM,
   pnpmVersion: '8.15.6',
   eslintOptions: {
@@ -86,6 +86,6 @@ project.addScripts({
   lint: 'eslint . --fix --max-warnings 0',
 });
 
-project.gitignore.exclude('.pnpm-store/');
+project.gitignore.exclude('.pnpm-store/', '.nx/');
 
 project.synth();
