@@ -55,11 +55,6 @@
       "type": "build"
     },
     {
-      "name": "pnpm",
-      "version": "8.15.6",
-      "type": "build"
-    },
-    {
       "name": "prettier",
       "type": "build"
     },
