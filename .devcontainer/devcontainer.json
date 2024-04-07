@@ -25,7 +25,9 @@
     // create and empty .ssh and .aws directories incase they don't exist to prevent failure of mounts
     "initializeCommand": "mkdir -p ${localEnv:HOME}${localEnv:USERPROFILE}/.ssh && mkdir -p ${localEnv:HOME}${localEnv:USERPROFILE}/.aws",
     // install deps when the container is updated or created
-    "updateContentCommand": {},
+    "updateContentCommand": {
+        "install": "pnpm install"
+    },
     "features": {
         // this is less performant, but couldn't get cdk synth working
         // when running docker outside of docker
@@ -92,6 +94,13 @@
                 "files.autoSaveDelay": 500,
                 "editor.formatOnSave": true,
                 "files.autoSave": "afterDelay",
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "[javascript]": {
+                  "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[typescript]": {
+                  "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
 				"highlight.regexes": {
 					"((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
 						"filterFileRegex": ".*(?<!CHANGELOG.md)$",

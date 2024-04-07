@@ -1,25 +1,31 @@
-import { typescript } from 'projen';
-import { NodePackageManager } from 'projen/lib/javascript';
-
+import { typescript } from "projen";
+import { NodePackageManager } from "projen/lib/javascript";
 
 const project = new typescript.TypeScriptProject({
-  defaultReleaseBranch: 'main',
-  name: 'name',
-  description: 'A cool typescript project',
+  defaultReleaseBranch: "main",
+  name: "name",
+  description: "A cool typescript project",
   projenrcTs: true,
-  license: 'MIT',
-  copyrightOwner: 'Jacob Petterle',
-  deps: [
-    'projen@^0.75',
-    'pnpm@^8.0',
-  ],
+  license: "MIT",
+  copyrightOwner: "Jacob Petterle",
+  devDeps: ["projen@^0.75", "pnpm@^8.0", "prettier@^3.2"],
   packageManager: NodePackageManager.PNPM,
+  eslintOptions: {
+    dirs: ["src"],
+    prettier: true,
+  },
+  prettier: true,
+  prettierOptions: {
+    settings: {
+      singleQuote: true,
+    },
+  },
 });
 
 project.addScripts({
-  preinstall: 'npx only-allow pnpm',
+  preinstall: "npx only-allow pnpm",
 });
 
-project.gitignore.exclude('.pnpm-store/');
+project.gitignore.exclude(".pnpm-store/");
 
 project.synth();
