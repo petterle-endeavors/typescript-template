@@ -20,7 +20,7 @@ const project = new typescript.TypeScriptProject({
       singleQuote: true,
     },
   },
-  devContainer: true,
+  jest: true,
 });
 
 project.addScripts({
