@@ -1,7 +1,7 @@
 import { typescript } from 'projen';
 import { NodePackageManager } from 'projen/lib/javascript';
 
-const README_CONTENTS = `
+const README_TEMPLATE = `
 # Project Title
 
 A brief one or two sentence description of the project.
@@ -58,7 +58,7 @@ const project = new typescript.TypeScriptProject({
   projenrcTs: true,
   readme: {
     filename: 'README.md',
-    contents: README_CONTENTS,
+    contents: README_TEMPLATE,
   },
   autoMerge: true,
   autoMergeOptions: {},
